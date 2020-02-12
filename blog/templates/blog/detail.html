@@ -63,20 +63,12 @@
 
 <main role="main">
   <div class="container">
-
-<h1 class="text-center pt-3">Welcome to Akarsh's Blog</h1>
+<h1 class="text-center pt-3">{{blog.title}}</h1>
+<p class="text-center">{{blog.pub_date}}</p>
 <br />
+<img class="img-fluid" src="{{blog.image.url}}" />
 <br />
-<h2>Latest Blogs</h2>
-<hr />
-{% for b in blogs.all %}
-<a href="{% url 'detail' b.id %}"><h3>{{b.title}}</h3></a>
-{{b.pub_date_pretty}}
-<br />
-<img class="img-fluid" src="{{b.image.url}}" height=200 width=200/>
-<br />
-<p>{{b.summary}}...</p>
-{% endfor %}
+<p>{{blog.body}}</p>
 
 </div>
 </main>

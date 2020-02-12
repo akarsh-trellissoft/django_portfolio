@@ -2,12 +2,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Portfolio Example</title>
+    <title>Akarsh's Portfolio</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -16,15 +17,6 @@
 
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
-
 
     <style>
       .bd-placeholder-img {
@@ -46,15 +38,15 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Akarsh Kumar</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Akarsh Kumar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Twitter</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="http://twitter.com//kumarmadhwa">Twitter</a>
+          <a class="nav-item nav-link" href="{% static 'Download File (1).pdf' %}">Resume</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
         </div>
       </div>
     </nav>
@@ -65,10 +57,11 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1>Hi,I am Akarsh Kumar</h1>
-      <p class="lead text-muted">Hii I am Akarsh Kumar Madhwa i am a django backend developer i love to create websites using python.</p>
+      <p class="lead text-muted"><h4>Hii i am "Akarsh Kumar Madhwa" i am a django backend developer,i love to play with django and python for creating websites.</h4></p>
       <p>
         <a href="mailto:kaksrh@trellissoft.com" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static '20161207_113449.jpg' %}" hight=400 width=400/>
     </div>
   </section>
 
